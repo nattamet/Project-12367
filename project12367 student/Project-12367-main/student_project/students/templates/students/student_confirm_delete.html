@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>คุณแน่ใจหรือไม่ว่าต้องการลบนักศึกษาชื่อ "{{ student.name }}"?</h3>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">ลบ</button>
+    <a href="{% url 'student_list' %}" class="btn btn-secondary">ยกเลิก</a>
+</form>
+{% endblock %}

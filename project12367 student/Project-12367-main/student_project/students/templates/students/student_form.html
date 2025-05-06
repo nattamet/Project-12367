@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-info">บันทึก</button>
+    <a href="{% url 'student_list' %}" class="btn btn-secondary">ยกเลิก</a>
+</form>
+{% endblock %}

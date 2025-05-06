@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+.hero {
+  background: url('https://cdn.pixabay.com/photo/2014/10/11/07/21/bokeh-484260_960_720.jpg') center/cover no-repeat;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+ }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-xl bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">หน้าแรก</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'student_create' %}">ลงทะเบียนเรียน</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'student_search' %}">ค้นหานักศึกษา</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        
+        <div class="container mt-4 hero">
+            <h1 class="mb-4 text-light">ลงทะเบียนนักศึกษา</h1>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </header>
+  
+    <main>
+        <!-- python manage.py runserver -->
+    </main>
+  
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-1">ณฐเมศร์ กิตติเจริญลัคน์</p>
+        <p class="mb-0">
+          ติดต่อ: <a class="text-warning text-decoration-none">nat.kit@spumail.net</a> |
+          โทร: 098-747-4401
+        </p>
+      </div>
+    </footer>
+  </body>
+  
+</html>
